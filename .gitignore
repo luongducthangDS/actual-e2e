@@ -2,3 +2,6 @@ __pycache__/
 .pytest_cache/
 artifacts/
 sut/
+CV/
+*.pdf
+*.tex
