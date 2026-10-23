@@ -9,8 +9,8 @@ parallel runs, and a Playwright trace saved for every failure.
 | | |
 |---|---|
 | Journeys | **9** end-to-end user journeys, all green |
-| Stability | **5 / 5** full runs green after stabilisation (3 parallel, 2 sequential) |
-| Runtime on 2 vCPU | sequential 168–177 s · parallel `-n 2` 146–167 s. The gain is small because the browser and server are CPU-bound on 2 cores |
+| Stability | **5 / 5** full runs green, 3 parallel + 2 sequential ([log](docs/evidence/stability_5_runs.txt), JUnit XML per run in `docs/evidence/`) |
+| Runtime on 2 vCPU | sequential 163–171 s · parallel `-n 2` 135–153 s (≈15% faster: browser and server are CPU-bound on 2 cores) |
 | Isolation | every test starts its own Actual server with an empty data directory, so tests are order-independent |
 | Debuggability | on failure, a Playwright trace (DOM snapshots, screenshots, network) is written to `artifacts/` and uploaded by CI |
 
@@ -57,6 +57,6 @@ playwright show-trace artifacts/<test>.zip   # after a failure
 ## Interview questions this project prepares for
 
 1. Why one server per test instead of one per session? What does it cost?
-2. Why did parallelism only save ~10% here, and when would it save more?
+2. Why did parallelism only save ~15% here, and when would it save more?
 3. What is the difference between a fixed wait and a web-first assertion, and why are both used here?
 4. How would you keep these tests green when Actual renames a button?

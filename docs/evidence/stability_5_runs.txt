@@ -1,0 +1,76 @@
+### run 1 parallel -n 2 2026-10-23T16:54:38Z
+bringing up nodes...
+
+.........                                                                [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_journeys.py::test_new_account_appears_in_sidebar_and_to_budget
+PASSED tests/test_journeys.py::test_first_run_owner_sets_password_and_reaches_budget
+PASSED tests/test_journeys.py::test_wrong_password_is_rejected_then_right_one_works
+PASSED tests/test_journeys.py::test_categorised_expense_shows_up_in_budget
+PASSED tests/test_journeys.py::test_editing_an_amount_recalculates_the_balance
+PASSED tests/test_journeys.py::test_transfer_moves_money_without_changing_to_budget
+PASSED tests/test_journeys.py::test_deleting_a_transaction_restores_the_balance
+PASSED tests/test_journeys.py::test_search_filters_the_register
+PASSED tests/test_journeys.py::test_data_survives_a_page_reload
+9 passed in 136.25s (0:02:16)
+### run 2 parallel -n 2 2026-10-23T16:56:55Z
+bringing up nodes...
+
+.........                                                                [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_journeys.py::test_first_run_owner_sets_password_and_reaches_budget
+PASSED tests/test_journeys.py::test_new_account_appears_in_sidebar_and_to_budget
+PASSED tests/test_journeys.py::test_wrong_password_is_rejected_then_right_one_works
+PASSED tests/test_journeys.py::test_categorised_expense_shows_up_in_budget
+PASSED tests/test_journeys.py::test_transfer_moves_money_without_changing_to_budget
+PASSED tests/test_journeys.py::test_editing_an_amount_recalculates_the_balance
+PASSED tests/test_journeys.py::test_deleting_a_transaction_restores_the_balance
+PASSED tests/test_journeys.py::test_search_filters_the_register
+PASSED tests/test_journeys.py::test_data_survives_a_page_reload
+9 passed in 135.32s (0:02:15)
+### run 3 parallel -n 2 2026-10-23T16:59:12Z
+bringing up nodes...
+
+.........                                                                [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_journeys.py::test_new_account_appears_in_sidebar_and_to_budget
+PASSED tests/test_journeys.py::test_first_run_owner_sets_password_and_reaches_budget
+PASSED tests/test_journeys.py::test_wrong_password_is_rejected_then_right_one_works
+PASSED tests/test_journeys.py::test_categorised_expense_shows_up_in_budget
+PASSED tests/test_journeys.py::test_editing_an_amount_recalculates_the_balance
+PASSED tests/test_journeys.py::test_transfer_moves_money_without_changing_to_budget
+PASSED tests/test_journeys.py::test_deleting_a_transaction_restores_the_balance
+PASSED tests/test_journeys.py::test_search_filters_the_register
+PASSED tests/test_journeys.py::test_data_survives_a_page_reload
+9 passed in 153.25s (0:02:33)
+### run 4 sequential 2026-10-23T17:01:46Z
+.........                                                                [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_journeys.py::test_first_run_owner_sets_password_and_reaches_budget
+PASSED tests/test_journeys.py::test_wrong_password_is_rejected_then_right_one_works
+PASSED tests/test_journeys.py::test_new_account_appears_in_sidebar_and_to_budget
+PASSED tests/test_journeys.py::test_categorised_expense_shows_up_in_budget
+PASSED tests/test_journeys.py::test_transfer_moves_money_without_changing_to_budget
+PASSED tests/test_journeys.py::test_editing_an_amount_recalculates_the_balance
+PASSED tests/test_journeys.py::test_deleting_a_transaction_restores_the_balance
+PASSED tests/test_journeys.py::test_search_filters_the_register
+PASSED tests/test_journeys.py::test_data_survives_a_page_reload
+9 passed in 163.08s (0:02:43)
+### run 5 sequential 2026-10-23T17:04:30Z
+.........                                                                [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_journeys.py::test_first_run_owner_sets_password_and_reaches_budget
+PASSED tests/test_journeys.py::test_wrong_password_is_rejected_then_right_one_works
+PASSED tests/test_journeys.py::test_new_account_appears_in_sidebar_and_to_budget
+PASSED tests/test_journeys.py::test_categorised_expense_shows_up_in_budget
+PASSED tests/test_journeys.py::test_transfer_moves_money_without_changing_to_budget
+PASSED tests/test_journeys.py::test_editing_an_amount_recalculates_the_balance
+PASSED tests/test_journeys.py::test_deleting_a_transaction_restores_the_balance
+PASSED tests/test_journeys.py::test_search_filters_the_register
+PASSED tests/test_journeys.py::test_data_survives_a_page_reload
+9 passed in 170.66s (0:02:50)
