@@ -60,3 +60,7 @@ playwright show-trace artifacts/<test>.zip   # after a failure
 2. Why did parallelism only save ~15% here, and when would it save more?
 3. What is the difference between a fixed wait and a web-first assertion, and why are both used here?
 4. How would you keep these tests green when Actual renames a button?
+
+## Data and license
+
+Code: MIT ([LICENSE](LICENSE)). Data: System under test: [Actual Budget](https://github.com/actualbudget/actual) (MIT), installed from npm at test time. Test data is created by the tests.

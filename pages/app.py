@@ -3,7 +3,6 @@
 Selector policy (most to least stable): data-testid > ARIA role + name > visible text.
 CSS classes are never used: Actual's are generated and change between releases.
 """
-import re
 
 from playwright.sync_api import Page, expect
 
