@@ -1,10 +1,10 @@
 """User journeys through the real UI. Each test = one thing a user wants to get done."""
 import re
 
+from conftest import PASSWORD
 from playwright.sync_api import expect
 
-from pages.app import AccountPage, LoginPage
-from conftest import PASSWORD
+from pages.app import LoginPage
 
 DAY = "10/15/2026"
 
@@ -22,7 +22,7 @@ def test_wrong_password_is_rejected_then_right_one_works(page, server):
     login = LoginPage(page, server.url)
     login.set_first_password(PASSWORD)
     login.login("not-the-password")
-    expect(page.get_by_text(re.compile("invalid password", re.I))).to_be_visible()
+    expect(page.get_by_text(re.compile("invalid password", re.IGNORECASE))).to_be_visible()
     login.login(PASSWORD)
     expect(page.get_by_text("Start budgeting")).to_be_visible()
 
