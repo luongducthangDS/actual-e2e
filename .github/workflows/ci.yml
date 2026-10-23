@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: Actual E2E Journeys (Playwright)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Actual Budget Server
+        run: |
+          mkdir sut
+          cd sut
+          npm i @actual-app/sync-server@26.10.0
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Python dependencies & Playwright
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run E2E Journeys (Sequential)
+        run: |
+          ACTUAL_DIR=sut pytest --junitxml=reports/junit.xml
+
+      - name: Upload Test Traces & Reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: actual-e2e-artifacts
+          path: |
+            reports/
+            artifacts/
